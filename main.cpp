@@ -7,6 +7,7 @@
 #include "Err_list.h"
 #include "token.h"
 #include "lexer.h"
+#include "interpreter.h"
 
 int main(int a, char *argv[]){
     std::ifstream inf(argv[1]);
@@ -22,5 +23,6 @@ int main(int a, char *argv[]){
     cleaning_code(Code);
     std::cout << Code << std::endl;
     std::vector<token>tokens = lex(Code);
+    std::string CCode = inter(tokens);
     return 0;
 }

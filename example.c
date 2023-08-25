@@ -1,6 +1,24 @@
 #include <stdio.h>
 
 int main(){
-    printf("Hello, World!");
+    char mem[256] = {0};
+    int p = 0;
+    printf("is started");
+    //+
+    mem[p]++;
+    //-
+    mem[p]--;
+    //.
+    printf("%c", mem[p]);
+    //,
+    scanf("%c", &mem[p]);
+    //>
+    p++;
+    //<
+    p--;
+    //[
+    while(mem[p] > 0){
+    //]
+    }
     return 0;
 }
