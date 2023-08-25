@@ -3,7 +3,6 @@
 int main(){
     char mem[256] = {0};
     int p = 0;
-    printf("is started");
     //+
     mem[p]++;
     //-

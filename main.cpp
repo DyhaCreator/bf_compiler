@@ -20,9 +20,16 @@ int main(int a, char *argv[]){
     while(getline(inf, str)){
         Code += str;
     }
+    inf.close();
     cleaning_code(Code);
-    std::cout << Code << std::endl;
+    //std::cout << Code << std::endl;
     std::vector<token>tokens = lex(Code);
     std::string CCode = inter(tokens);
+    std::ofstream out;
+    out.open("CCode.c");
+    out << CCode;
+    out.close();
+    system("gcc CCode.c");
+    system("rm CCode.c");
     return 0;
 }
