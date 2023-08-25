@@ -2,6 +2,7 @@ std::vector<token> lex(std::string code){
     std::stack<char>st;
     std::vector<token>tokens = std::vector<token>();
     for(int i = 0; i < code.size(); i++){
+        int num = 1;
         if(code[i] == '['){
             st.push('[');
         }
@@ -24,7 +25,25 @@ std::vector<token> lex(std::string code){
                 st.pop();
             }
         }
-        tokens.push_back(token(code[i]));
+        else if(code[i] == '+' || code[i] == '-'){
+            for(int j = i + 1; j < code.size(); j++){
+                if(code[j] != code[i]){
+                    break;
+                }
+                num++;
+                i++;
+            }
+        }
+        else if(code[i] == '>' || code[i] == '<'){
+            for(int j = i + 1; j < code.size(); j++){
+                if(code[j] != code[i]){
+                    break;
+                }
+                num++;
+                i++;
+            }
+        }
+        tokens.push_back(token(num, code[i]));
     }
     if(!st.empty()){
         Err(2);

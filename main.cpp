@@ -24,6 +24,7 @@ int main(int a, char *argv[]){
     cleaning_code(Code);
     //std::cout << Code << std::endl;
     std::vector<token>tokens = lex(Code);
+    //for(int i = 0; i < tokens.size(); i++)std::cout << tokens[i].name << " " << tokens[i].code << std::endl;
     std::string CCode = inter(tokens);
     std::ofstream out;
     out.open("CCode.c");
