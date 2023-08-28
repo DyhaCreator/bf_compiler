@@ -46,6 +46,6 @@ int main(int a, char *argv[]){
     out << CCode;
     out.close();
     system("gcc CCode.c");
-    //system("rm CCode.c");
+    system("rm CCode.c");
     return 0;
 }
