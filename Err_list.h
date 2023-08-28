@@ -15,6 +15,10 @@ int Err(int code){
             std::cout << "one or more cycles were not closed" << std::endl;
             exit(1);
             break;
+        case 3:
+            std::cout << "Err 0x03" << std::endl;
+            std::cout << "the lexicon file you specified does not exist" << std::endl;
+            break;
     }
     return 0;
 }

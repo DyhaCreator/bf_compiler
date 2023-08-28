@@ -1,6 +1,7 @@
 struct token{
     int code;
     std::string name;
+    char analog;
     token(){}
     token(char name){
         this->name = name;
@@ -16,5 +17,10 @@ struct token{
     token(int code, std::string name){
         this->code = code;
         this->name = name;
+    }
+    token(int code, std::string name, char analog){
+        this->code = code;
+        this->name = name;
+        this->analog = analog;
     }
 };
