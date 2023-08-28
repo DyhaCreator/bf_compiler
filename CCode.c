@@ -1,2 +1,0 @@
-#include <stdio.h>
-int main(){char mem[65536];int p=0;mem[p]+=10;while(mem[p]>0){p+=1;mem[p]+=7;p+=1;mem[p]+=10;p+=1;mem[p]+=3;p+=1;mem[p]+=1;p-=4;mem[p]-=1;}p+=1;mem[p]+=2;printf("%c",mem[p]);p+=1;mem[p]+=1;printf("%c",mem[p]);mem[p]+=7;printf("%c",mem[p]);printf("%c",mem[p]);mem[p]+=3;printf("%c",mem[p]);p+=1;mem[p]+=2;printf("%c",mem[p]);p-=2;mem[p]+=15;printf("%c",mem[p]);p+=1;printf("%c",mem[p]);mem[p]+=3;printf("%c",mem[p]);mem[p]-=6;printf("%c",mem[p]);mem[p]-=8;printf("%c",mem[p]);p+=1;mem[p]+=1;printf("%c",mem[p]);p+=1;printf("%c",mem[p]);return 0;}
